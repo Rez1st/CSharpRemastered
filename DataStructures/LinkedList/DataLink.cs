@@ -32,6 +32,23 @@ namespace LinkedList
             Tail = box;
         }
 
+        public T RemoveLast()
+        {
+            T val = Tail.Data;
+
+            if (Tail.PrevBox == null)
+            {
+                Clear();
+                return val;
+            }
+
+            Tail.PrevBox.NextBox = null;
+            Tail = Tail.PrevBox;
+
+            Count--;
+            return val;
+        }
+
         public void Clear()
         {
             Head = null;
