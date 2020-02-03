@@ -32,7 +32,7 @@ namespace LinkedList
             Tail = box;
         }
 
-        public T RemoveLast()
+        public T CutLast()
         {
             T val = Tail.Data;
 
@@ -47,6 +47,28 @@ namespace LinkedList
 
             Count--;
             return val;
+        }
+
+        public T CutFirst()
+        {
+            if (Head == null)
+                throw new InvalidOperationException($"Sequence is empty");
+
+            T data = Head.Data;
+
+            if (Head.NextBox != null)
+            {
+                Head.NextBox.PrevBox = null;
+                Head = Head.NextBox;
+            }
+            else
+            {
+                Head = null;
+            }
+
+            Count--;
+
+            return data;
         }
 
         public void Clear()

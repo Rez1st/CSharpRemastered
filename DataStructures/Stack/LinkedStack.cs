@@ -31,7 +31,7 @@ namespace Stack
             if (_list.Count == 0)
                 throw new InvalidOperationException("Sequence contain 0 items");
 
-            return _list.RemoveLast();
+            return _list.CutLast();
         }
     }
 }

@@ -7,6 +7,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\LinkedList\LinkedList.csproj" />
+    <ProjectReference Include="..\Queue\Queue.csproj" />
     <ProjectReference Include="..\Stack\Stack.csproj" />
   </ItemGroup>
 

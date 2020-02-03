@@ -1,4 +1,5 @@
 ﻿using System;
+using Queue;
 using Stack;
 
 namespace Runner
@@ -7,10 +8,20 @@ namespace Runner
     {
         private static void Main(string[] args)
         {
-            args = new[] {"5", "6", "*"};
-            var calc = new PostfixCalculator();
+            var lq = new LinkedQueue<int>();
 
-            Console.WriteLine(calc.Process(args));
+            var testArr = new int[10];
+            testArr.Fill();
+
+            foreach (var item in testArr)
+            {
+               lq.Enqueue(item); 
+            }
+
+            while (lq.Count >= 1)
+            {
+                Console.WriteLine(lq.Dequeue());
+            }
 
             Console.ReadKey();
         }
