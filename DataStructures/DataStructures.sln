@@ -5,9 +5,11 @@ VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Runner", "Runner\Runner.csproj", "{53A6FBB2-894D-4F4C-9720-28EA059A76D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedList", "LinkedList\LinkedList.csproj", "{2E3CC204-C649-494B-9FCD-14A40AC923B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinkedList", "LinkedList\LinkedList.csproj", "{2E3CC204-C649-494B-9FCD-14A40AC923B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stack", "Stack\Stack.csproj", "{7B94DDA9-78E9-427F-9F9E-1F1C6FCF21A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stack", "Stack\Stack.csproj", "{7B94DDA9-78E9-427F-9F9E-1F1C6FCF21A1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataStructures", "DataStructures", "{BFF9FD5B-D6D3-4A04-8390-4EFF6AC824DA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,6 +32,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2E3CC204-C649-494B-9FCD-14A40AC923B2} = {BFF9FD5B-D6D3-4A04-8390-4EFF6AC824DA}
+		{7B94DDA9-78E9-427F-9F9E-1F1C6FCF21A1} = {BFF9FD5B-D6D3-4A04-8390-4EFF6AC824DA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {81CDA9B9-E6DA-40E3-B886-DCEA7806CDD8}

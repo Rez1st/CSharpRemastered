@@ -23,18 +23,17 @@ namespace Runner
             //}
 
             // Stack
-            var linkedStack = new LinkedStack<int>();
+            var arrayStack = new ArrayStack<int>();
 
             for (int i = 0; i < 10; i++)
             {
-                linkedStack.Push(i);
+                arrayStack.Push(i);
                 Console.WriteLine($"{i} pushed to stack");
             }
 
-            while (linkedStack.Count > 0)
+            while (arrayStack.Count > 0)
             {
-                Console.WriteLine($"{linkedStack.Pop()} got from stack, items left : {linkedStack.Count}");
-                
+                Console.WriteLine($"{arrayStack.Pop()} got from stack, items left : {arrayStack.Count}");
             }
 
             Console.ReadKey();
