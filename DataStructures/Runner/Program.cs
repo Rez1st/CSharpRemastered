@@ -1,6 +1,5 @@
 ﻿using System;
 using Queue;
-using Stack;
 
 namespace Runner
 {

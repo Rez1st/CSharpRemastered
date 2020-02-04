@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace LinkedList
 {
-    public class DataLink<T> : IEnumerable<T>, ICollection<T>
+    public class DataLink<T> : ICollection<T>
     {
         private Box<T> Head { get; set; }
 

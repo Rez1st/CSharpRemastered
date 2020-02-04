@@ -8,7 +8,6 @@ namespace Stack
     public class LinkedStack<T> : IEnumerable<T>
     {
         private readonly DataLink<T> _list = new DataLink<T>();
-
         public int Count => _list.Count;
 
         public IEnumerator<T> GetEnumerator()

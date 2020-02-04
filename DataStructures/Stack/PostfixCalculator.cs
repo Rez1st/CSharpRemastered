@@ -10,7 +10,7 @@ namespace Stack
         private readonly ArrayStack<int> _stack = new ArrayStack<int>();
         private readonly string[] _tokenList = {"%", "/", "+", "-", "*"};
 
-        private readonly Dictionary<string, Func<int, int, int>> _actions = new Dictionary<string, Func<int, int, int>>()
+        private readonly Dictionary<string, Func<int, int, int>> _actions = new Dictionary<string, Func<int, int, int>>
         {
             {"%", (lhs, rhs) => lhs % rhs},
             {"/", (lhs, rhs) => lhs / rhs},

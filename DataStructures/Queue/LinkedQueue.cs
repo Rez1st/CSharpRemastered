@@ -6,7 +6,6 @@ namespace Queue
     public class LinkedQueue<T>
     {
         public int Count => _linkedList.Count;
-
         private readonly DataLink<T> _linkedList = new DataLink<T>();
 
         public void Enqueue(T item)

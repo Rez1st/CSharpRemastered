@@ -4,12 +4,11 @@ namespace Stack
 {
     public class ArrayStack<T>
     {
-        public int Count => _array.Length - _pointer - 1;
-
         private const int FirstMinSize = 8;
         private const int OutOfSpaceMultiplier = 2;
-        private int _pointer;
         private T[] _array = new T[0];
+        private int _pointer;
+        public int Count => _array.Length - _pointer - 1;
 
         public void Push(T item)
         {
@@ -33,7 +32,7 @@ namespace Stack
                 _array.CopyTo(tempArray, tempArray.Length - _array.Length);
 
                 // set pointer to correct spot
-                _pointer = tempArray.Length - _array.Length -1;
+                _pointer = tempArray.Length - _array.Length - 1;
 
                 // switching arrays
                 _array = tempArray;
@@ -64,10 +63,8 @@ namespace Stack
         {
             var tempArray = new T[_array.Length / OutOfSpaceMultiplier];
 
-            for (int i = 0; i < tempArray.Length - 1; i++)
-            {
+            for (var i = 0; i < tempArray.Length - 1; i++)
                 tempArray[tempArray.Length - 1 - i] = _array[_array.Length - 1 - i];
-            }
 
             _pointer = 1;
 
