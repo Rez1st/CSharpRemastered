@@ -7,20 +7,52 @@ namespace Runner
     {
         private static void Main(string[] args)
         {
-            var lq = new LinkedQueue<int>();
+            var aq = new ArrayQueue<int>();
 
             var testArr = new int[10];
-            testArr.Fill();
+            testArr.FillRandom();
 
-            foreach (var item in testArr)
-            {
-               lq.Enqueue(item); 
-            }
+            Console.WriteLine($"Enqueue {testArr[0]}");
+            aq.Enqueue(testArr[0]);
 
-            while (lq.Count >= 1)
-            {
-                Console.WriteLine(lq.Dequeue());
-            }
+            Console.WriteLine($"Enqueue {testArr[1]}");
+            aq.Enqueue(testArr[1]);
+
+            Console.WriteLine($"Enqueue {testArr[2]}");
+            aq.Enqueue(testArr[2]);
+
+            Console.WriteLine($"Enqueue {testArr[3]}");
+            aq.Enqueue(testArr[3]);
+
+            Console.WriteLine($"Enqueue {testArr[4]}");
+            aq.Enqueue(testArr[4]);
+
+            Console.WriteLine($"Enqueue {testArr[5]}");
+            aq.Enqueue(testArr[5]);
+
+            Console.WriteLine($"Count {aq.Count}");
+
+            Console.WriteLine($"Dequeue {aq.Dequeue()}");
+            Console.WriteLine($"Dequeue {aq.Dequeue()}");
+
+            Console.WriteLine($"Count {aq.Count}");
+
+            Console.WriteLine($"Enqueue {testArr[6]}");
+            aq.Enqueue(testArr[6]);
+
+            Console.WriteLine($"Enqueue {testArr[7]}");
+            aq.Enqueue(testArr[7]);
+
+            Console.WriteLine($"Enqueue {testArr[8]}");
+            aq.Enqueue(testArr[8]);
+
+            Console.WriteLine($"Enqueue {testArr[9]}");
+            aq.Enqueue(testArr[9]);
+
+            Console.WriteLine($"Dequeue {aq.Dequeue()}");
+            Console.WriteLine($"Dequeue {aq.Dequeue()}");
+            Console.WriteLine($"Dequeue {aq.Dequeue()}");
+            Console.WriteLine($"Dequeue {aq.Dequeue()}");
 
             Console.ReadKey();
         }
